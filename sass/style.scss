@@ -1,183 +1,677 @@
 /*==================================================RESET=====================================================*/
-*{
-	margin: 0;
-	padding: 0;
-	text-decoration: none;
-	border: none;
-	line-height:normal;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing:antialiased;
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    line-height: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
+
+ol, ul, li, form ol {
+    list-style: none;
+}
+
 /*========================FONT-FACE==============================*/
 @font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local("Open Sans Light"), local("OpenSans-Light"), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format("woff");
 }
+
+
 @font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local("Open Sans"), local("OpenSans"), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format("woff");
 }
+
+
 @font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local("Open Sans Bold"), local("OpenSans-Bold"), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff) format("woff");
 }
+
+
 @font-face {
-  font-family: 'Open Sans';
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 800;
+    src: local("Open Sans Extrabold"), local("OpenSans-Extrabold"), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/EInbV5DfGHOiMmvb1Xr-hqRDOzjiPcYnFooOUGCOsRk.woff) format("woff");
+}
+
+
+@font-face {
+    font-family: 'geometr415_blk_btblack';
+    src: url("fonts/tt0524m_-webfont.eot");
+    src: url("fonts/tt0524m_-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/tt0524m_-webfont.woff") format("woff"), url("fonts/tt0524m_-webfont.ttf") format("truetype"), url("fonts/tt0524m_-webfont.svg#geometr415_blk_btblack") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: "raty";
   font-style: normal;
-  font-weight: 800;
-  src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/EInbV5DfGHOiMmvb1Xr-hqRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+  font-weight: normal;
+  src: url("fonts/raty.eot");
+  src: url("fonts/raty.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/raty.svg#raty") format("svg");
+  src: url("fonts/raty.ttf") format("truetype");
+  src: url("fonts/raty.woff") format("woff");
 }
 /*========================FUNCOES==============================*/
-@mixin model($width, $height){
-	width: $width;
-	height:$height;
+@mixin model($width, $height) {
+    width: $width;
+    height: $height;
 }
+
 /*========================VARIAVEIS==============================*/
 /*FONTES*/
-$Open:'Open Sans';
+$Open: "Open Sans";
+$Geo: "geometr415_blk_btblack";
+
 
 /*CORES*/
-$Branco: #ffffff;
-$Preto: #000000;
+$Branco: white;
+$Preto: black;
 $PretoFosco: #2e2e2e;
 $Laranja: #e2982f;
 $Azul: #233a62;
 $AzulClaro: #00b4da;
+$AzulMedio: #24324e;
 $CinzaClaro: #dddddd;
 $CinzaMedio: #cccccc;
+$CinzaEscuro: #383838;
+
 /*=========================COMUNS=================================*/
-.clear{
-	clear:both;
-}
-.content{
-	width:1100px;
-	margin:0 auto;
-}
-.hide{
-	display:none !important;
+.clear {
+    clear: both;
 }
 
-/*==================================================HEADER=====================================================*/
-header{
-	@include model(100%,60px);
-	background-color:$Laranja;
-	display:block;
+.content {
+    width: 1100px;
+    margin: 0 auto;
 }
-.top{
-	@include model(1100px,60px);
-	margin:0 auto;
+
+.hide {
+    display: none !important;
 }
-.logo-header{
-	width:320px;
-	height:59px;
+
+.hide1 {
+    display: none !important;
+}
+
+.wrap-content {
+    min-width: 1100px;
+}
+
+hr {
+    @include model(1050px, 1px);
+    background: url(../images/h.png) no-repeat center top;
+    margin: 0px auto;
+    margin-top: 20px;
+}
+/*==================================================RATING=====================================================*/
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  font-size: 2em;
+}
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "raty";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+}
+
+.cancel-on-png:before {
+  content: "\e600";
+}
+
+.cancel-off-png:before {
+  content: "\e601";
+}
+
+.star-on-png:before {
+  content: "\f005";
+}
+
+.star-off-png:before {
+  content: "\f006";
+}
+
+.star-half-png:before {
+  content: "\f123";
+}
+#star{
 	float:left;
 }
-.menu-topo{
-	font-family:$Open;
-	color:$Branco;
-	ul{
-		float: right;
-		@include model(320px,60px);
-	}
-	li{
-		display:inline;
-		height: 60px;
-		line-height: 60px;
-		padding:0 15px;
-		background:url(../images/border-nav.png) left center no-repeat;
-	}
-	a{
-		color: $Branco;
-		font-family: $Open;
-		font-size: 14px;
-	}
+/*==================================================HEADER=====================================================*/
+header {
+    @include model(100%, 60px);
+    background-color: $Laranja;
+    display: block;
 }
-.border-nav a::after{
-	background-color:$Branco;
-	display:block;
-	@include model(1px,15px);
+
+.top {
+    @include model(1100px, 60px);
+    margin: 0 auto;
 }
-.submenu-topo{
-	@include model(100%,20px);
-	background-color:$Azul;
-	position: relative;
-	li{
-		display: inline;
-		height: 20px;
-		line-height: 20px;
-		padding:0 20px;
-		background:url(../images/border-nav.png) left center no-repeat;
-	}
-	a{
-		color: $Branco;
-		font-family: $Open;
-		font-size: 14px;
-		font-weight:normal;
-	}
+
+.logo-header {
+    width: 320px;
+    height: 59px;
+    float: left;
 }
-.submenu-content{
-	@include model(1100px,310px);
-	display:block;
-	background-color: $CinzaClaro;
-	overflow-y:auto;
-	margin:0 auto;
-	position:absolute;
+
+.menu-topo {
+    font-family: $Open;
+    color: $Branco;
+    ul {
+        float: right;
+        @include model(320px, 60px);
+    }
+    li {
+        display: inline;
+        height: 60px;
+        line-height: 60px;
+        padding: 0 15px;
+        background: url(../images/border-nav.png) left center no-repeat;
+    }
+    a {
+        color: $Branco;
+        font-family: $Open;
+        font-size: 15px;
+    }
+}
+
+.border-nav a::after {
+    background-color: $Branco;
+    display: block;
+    @include model(1px, 15px);
+}
+
+.submenu-topo {
+    @include model(100%, 20px);
+    background-color: $Azul;
+    position: relative;
+    li {
+        display: inline;
+        height: 20px;
+        line-height: 20px;
+        padding: 0 20px;
+        background: url(../images/border-nav.png) left center no-repeat;
+    }
+    a {
+        color: $Branco;
+        font-family: $Open;
+        font-size: 15px;
+        font-weight: normal;
+    }
+}
+
+.submenu-content {
+    @include model(1100px, 310px);
+    display: block;
+    background-color: $CinzaClaro;
+    overflow-y: auto;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 99999;
+}
+
+.sub-content-categorias {
+    width: 950px;
+    padding: 20px 25px;
+    li {
+        @include model(210px, 270px);
+        border-right: 1px solid $CinzaMedio;
+        display: inline-block;
+        padding-right: 15px;
+        overflow: hidden;
+    }
+}
+
+.sub-content-categorias-box {
+    @include model(165px, 105px);
+    display: block;
+    clear: both;
+    padding: 0 0 40px 0;
+    position: relative;
+    left: 20px;
+    h1 {
+        font-size: 12px;
+        text-transform: uppercase;
+        font-family: $Open;
+    }
+    li {
+        display: block;
+        height: 16px;
+        line-height: 16px;
+        font-family: $Open;
+        font-size: 15px;
+    }
+    a {
+        color: $PretoFosco;
+        &:hover {
+            color: $AzulClaro;
+        }
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+.link-menu-active {
+    a {
+        color: $AzulClaro;
+    }
+}
+
+/*=============================================HOME BANNER======================================*/
+.home-banner {
+    @include model(100%, 600px);
+    display: block;
+    background: url(../images/bg_banner.jpg) center top no-repeat;
+}
+
+.home-formulario {
+    @include model(551px, 263px);
+    display: block;
+    position: relative;
+    float: right;
+    top: 220px;
+    p {
+        text-shadow: 2px 2px 2px $PretoFosco;
+        color: $Branco;
+        font-size: 20px;
+        font-family: $Open;
+    }
+    .oque {
+        @include model(538px, 37px);
+        background: url(../images/lupa.png) no-repeat 97% 50% $Branco;
+        border: 1px solid #dedede;
+        padding: 4px;
+        margin-bottom: 10px;
+        font-size: 0.9em;
+        color: #3a3a3a;
+        -moz-border-radius: 100px;
+        -webkit-border-radius: 100px;
+        -webkit-appearance: none;
+        border-radius: 100px;
+        text-indent: 20px;
+    }
+    .onde {
+        @include model(538px, 37px);
+        background: url(../images/lugar.png) no-repeat 97% 50% $Branco;
+        border: 1px solid #dedede;
+        padding: 4px;
+        margin-bottom: 10px;
+        font-size: 0.9em;
+        color: #3a3a3a;
+        -moz-border-radius: 100px;
+        -webkit-border-radius: 100px;
+        -webkit-appearance: none;
+        border-radius: 100px;
+        text-indent: 20px;
+    }
+    .submit {
+        @include model(202px, 47px);
+        float: right;
+        padding: 9px 15px;
+        background: $Laranja;
+        border: 0;
+        font-size: 14px;
+        color: #FFFFFF;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        border-radius: 100px;
+        cursor: pointer;
+    }
+}
+
+/*=============================================HOME SOBRE======================================*/
+.home-sobre {
+    @include model(100%, auto);
+    display: block;
+    background: url(../images/sobreback.jpg) center top no-repeat;
+    h1 {
+        font-family: $Open;
+        font-weight: bold;
+        color: $Branco;
+        text-align: center;
+        font-size: 60px;
+    }
+    ul.ul-home-sobre {
+        @include model(1102px, 208px);
+        margin-top: 30px;
+    }
+    li {
+        @include model(294px, 207px);
+        display: inline-block;
+        margin-left: 80px;
+        &:first-child {
+            margin-left: 0px;
+        }
+    }
+    p {
+        font-family: $Open;
+        font-weight: bold;
+        font-size: 13px;
+        color: $Branco;
+    }
+}
+
+/*=============================================HOME CATEGORIAS======================================*/
+.home-categorias {
+    @include model(100%, auto);
+    display: block;
+    h1 {
+        font-family: $Open;
+        font-weight: bold;
+        color: $Laranja;
+        text-align: center;
+        font-size: 60px;
+    }
+    .exibir {
+        @include model(166px, 28px);
+        background: url(../images/btn-exibir-mais.png) no-repeat;
+        display: block;
+        margin: 0px auto;
+        margin-top: 30px;
+        cursor: pointer;
+        border: none;
+    }
+    article {
+        @include model(232px, auto);
+        display: inline-block;
+        margin: 10px 0px 0px 30px;
+        .a_letras {
+            @include model(34px, 103px);
+            font-family: $Open;
+            font-weight: bold;
+            font-size: 30px;
+            text-transform: uppercase;
+            color: $Laranja;
+            float: left;
+        }
+        .listagem {
+            @include model(194px, auto);
+            float: right;
+        }
+        a {
+            font-family: $Open;
+            font-weight: 400;
+            font-size: 16px;
+            color: $CinzaEscuro;
+            &:hover {
+                background: $CinzaMedio;
+            }
+        }
+    }
+}
+
+/*=============================================HOME ANUNCIOS======================================*/
+.home-anuncios {
+    @include model(100%, auto);
+    h1 {
+        font-family: $Open;
+        font-weight: bold;
+        color: $Laranja;
+        text-align: center;
+        font-size: 60px;
+    }
+    .banner {
+        margin: 0px auto;
+        display: block;
+        margin-bottom: 50px;
+    }
+    .c-home-anuncios {
+        @include model(1160px, 185px);
+        margin: 0px auto;
+    }
+    .s_esq {
+        @include model(35px, 64px);
+        padding-top: 50px;
+        float: left;
+    }
+    .c_cont {
+        @include model(1084px, 164px);
+        overflow: hidden;
+        float: left;
+        li {
+            display: inline-block;
+            margin-left: 50px;
+        }
+    }
+    .s_dir {
+        @include model(35px, 64px);
+        padding-top: 50px;
+        float: right;
+    }
+}
+
+/*=============================================FOOTER======================================*/
+footer {
+    @include model(100%, auto);
+    background: $Azul;
+    .logofooter {
+        float: left;
+        margin-top: 10px;
+    }
+    ul {
+        @include model(117px, auto);
+        float: left;
+        margin: 10px;
+        p {
+            font-family: $Open;
+            font-weight: bold;
+            color: $Laranja;
+        }
+        a {
+            font-family: $Open;
+            color: $Branco;
+        }
+    }
+}
+
+.p_footer {
+    @include model(100%, 54px);
+    background: $AzulMedio;
+    p {
+        font-family: $Open;
+        color: $Branco;
+        float: left;
+        margin-top: 20px;
+    }
+    img {
+        float: right;
+    }
+}
+
+/*=========================================================================================================================*/
+/*=====================================================BUSCA - LOCALIZACAO ===============================================*/
+.titRes{
+	font-family: $Geo;
+    color: $Laranja;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin:15px 0;
+    padding-top:25px;
+}
+.wrap-busca {
+    width: 1100px;
+    margin: 30px auto;
+}
+
+.filtros {
+    width: 330px;
+    float: left;
+}
+
+.ban1 {
+    padding: 15px;
+}
+
+.boxFiltros {
+    h2 {
+        height: 50px;
+        line-height: 50px;
+        padding: 0 15px;
+        font-family: $Geo;
+        color: $Azul;
+        text-transform: uppercase;
+        font-size: 24px;
+        border: 1px solid $CinzaMedio;
+    }
+    .boxFiltros-list {
+        border-top: 1px solid $Branco;
+        border-bottom: 1px solid $CinzaMedio;
+        border-left: 1px solid $CinzaMedio;
+        border-right: 1px solid $CinzaMedio;
+        margin-bottom: 20px;
+        ul {
+            margin: 15px 0;
+        }
+        li {
+            a {
+                color: $PretoFosco;
+                font-size: 14px;
+                font-family: $Open;
+                width: 300px;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 6px;
+                display: block;
+                margin: 5px 15px 0 15px;
+                text-indent: 10px;
+                &:hover {
+                    background-color: $CinzaClaro;
+                }
+            }
+        }
+    }
+}
+
+.localizacao {
+    margin: 15px auto;
+    margin-bottom: 50px;
+    width: 760px;
+    float: right;
+    h1 {
+        font-family: $Geo;
+        font-size: 24px;
+        color: $Azul;
+        text-transform: uppercase;
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
+    ul {
+        margin-top: 25px;
+        margin-left: 60px;
+    }
+    li {
+        display: inline-block;
+        width: 160px;
+        a {
+            font-size: 14px;
+            color: $Preto;
+            font-family: $Open;
+            -webkit-font-smoothing: subpixel-antialiased;
+            &:hover{
+            	color: $AzulClaro;
+            }
+        }
+    }
+}
+.resultados {
+	width:750px;
+	float:right;
+    li {
+    	@include model(750px,150px);
+    	border-top:1px solid $Branco;
+    	border-bottom:1px solid $CinzaMedio;
+        .resultados-box {
+            width: 750px;
+            height: 107px;
+            margin-top: 20px;
+            figure{
+            	float: left;
+            	padding-right:15px;
+            	img{
+            		@include model(140px,105px);
+            	}
+            }
+            h1{
+            	font-family: $Geo;
+            	color: $Laranja;
+            	font-size: 24px;
+            }
+            p{
+            	font-size: 12px;
+            	font-family: $Open;
+            	color: $Preto;
+            }
+            h2{
+				font-size: 13px;
+				font-family: $Open;
+				color: $CinzaEscuro;
+				font-weight: normal;
+            }
+            h3{
+            	font-size: 20px;
+            	color: $Laranja;
+            	font-family: $Geo;
+            	float: right;
+            }
+        }
+    }
+    .ban2{
+    	li{
+    		border:none;
+    		width: 750px;
+    		height: 90px;
+    		padding: 10px;
+    	}
+    }
+}
+.controle-pag{
+	font-family: $Geo;
+	color: $Laranja;
+	font-size:10px;
+	float:left;
+	span{
+		font-size: 30px;
+		position:relative;
+		top: 5px;
+		padding:0 8px;
+		a{
+			color: $Laranja;
+		}
+	}
 
 }
-.sub-content-categorias{
-	width:950px;
-	padding:20px 25px;
+.paginacao{
+	float:right;
+	padding-top:15px;
 	li{
-		@include model(210px,270px);
-		border-right:1px solid $CinzaMedio;
-		display: inline-block;
-		padding-right:15px;
-		overflow: hidden;
+		height: 25px;
+		line-height: 25px;
+		font-size: 20px;
+		border:none;
+		display: inline;
+		font-family: $Geo;
+		padding-left:10px;
+		a{
+			color: $Laranja;
+			&:hover{
+				color: $CinzaMedio;
+			}
+		}
 	}
 }
-.sub-content-categorias-box{
-	@include model(165px,105px);
-	display:block;
-	clear:both;
-	padding:0 0 40px 0;
-	position: relative;
-	left:20px;
-	h1{
-		font-size: 12px;
-		text-transform: uppercase;
-		font-family: $Open;
-	}
-	li{
-		display: block;
-		height: 16px;
-		line-height: 16px;
-		font-family: $Open;
-		font-size: 12px;
-	}
-	a{
-		color: $PretoFosco;
-		&:hover{color: $AzulClaro;}
-	}
-}
-.link-menu-active{
-	a{color:$AzulClaro;}
-}
-/*=============================================HOME BANNER======================================*/
-.home-banner{
-	@include model(100%,600px);
-	display:block;
-	background:url(../images/bg_banner.jpg) center top no-repeat;
-}
-/*=============================================HOME SOBRE======================================*/
-.home-sobre{
-	@include model(100%,800px);
-	display:block;
-}
-/*=============================================HOME CATEGORIAS======================================*/
-/*=============================================HOME ANUNCIOS======================================*/
