@@ -12,6 +12,12 @@
 ol, ul, li, form ol {
     list-style: none;
 }
+input:focus {
+  outline: none;
+}
+textarea:focus{
+ outline:none;
+}
 
 /*========================FONT-FACE==============================*/
 @font-face {
@@ -673,5 +679,173 @@ footer {
 				color: $CinzaMedio;
 			}
 		}
+	}
+}
+/*=========================================================================================================================*/
+/*=====================================================DETALHES ===============================================*/
+.wrap-detalhe {
+    width: 1100px;
+    margin: 30px auto;
+    h1{
+    	font-family: $Geo;
+	    color: $Laranja;
+	    font-size: 40px;
+	    margin:15px 0;
+	    padding-top:25px;
+    }
+    h2{
+    	font-family: $Geo;
+	    color: $Azul;
+	    font-size: 30px;
+	  	padding: 10px 0px 0px 10px;
+    }
+}
+.infos{
+	 width: 296px;
+   	 float: right;
+   	 .local{
+   	 	@include model(296px, 365px);
+   	 	background: $Branco;
+   	 	margin-bottom: 10px;
+   	 }
+   	 .links{
+   	 	@include model(296px, 137px);
+   	 	background: $Branco;
+   	 	margin-bottom: 10px;
+   	 	i{color:$Laranja;}
+   	 	p{color:$Laranja;font-family: $Geo; font-size: 18px;}
+   	 	ul{margin-top: 10px;}
+   	 	li{display: inline-block;margin-left: 30px;}
+   	 }
+   	 .proposta{
+   	 	@include model(296px, 457px);
+   	 	background: $Branco;
+   	 	i{color:#dedede;}
+   	 	form{@include model(275px, 396px);margin-left: 10px;}
+   	 	span{font-size: 20px; color:#dedede;margin-left: 5px;}
+   	 	input{
+   	 		border: 1px solid #dedede;
+   	 		@include model(260px, 30px);
+   	 		text-indent:15px;
+   	 		-moz-border-radius: 100px;
+	        -webkit-border-radius: 100px;
+	        -webkit-appearance: none;
+	        border-radius: 100px;
+	        margin-bottom: 10px;
+   	 	}
+   	 	.ddd{width:60px;}
+   	 	.fone{width:180px;}	
+   	 	.dinicio, .dfinal{width:92px;margin-right: 4px;}
+   	 	textarea {
+   	 		resize:none;
+   	 		@include model(263px, 185px);
+   	 		text-indent:15px;
+   	 		border: 1px solid #dedede;
+			-moz-border-radius: 20px;
+	        -webkit-border-radius: 20px;
+	        -webkit-appearance: none;
+	        border-radius: 20px;
+		}
+		input[type="submit"]{@include model(104px, 31px); background: $Laranja; color: $Branco;float: right; font-family: $Geo;text-indent: 0px; font-size: 20px; cursor: pointer;}
+   	 }
+}
+.p_detalhes{
+	@include model(797px, 365px);
+	margin-bottom: 10px;
+   	.imagens{
+   		@include model(495px, 365px);
+   	 	background: $Branco;
+   	 	margin-right: 9px;
+   	 	float: left;
+   	 	img{padding:10px; width: 476px; height: 282px;}
+   	 	li{
+   	 		display:inline-block;
+   	 		img{width:73px; height: 55px;padding: 0px 0px 0px 8px;}
+   	 	}
+   	}
+   	.precos{
+   		@include model(293px, 365px);
+   	 	background: $Branco;
+   	 	float: right;
+   	 	ul{@include model(271px, 157px);padding: 5px;margin-top: 40px;}
+   	 	li{
+   	 		border-bottom: solid 1px #b3b3b3;
+   	 		padding: 5px;
+   	 		&:last-child{border-bottom:0px;}
+   	 		.p_nome{float:left; font-size: 15px;}
+   	 		.p_preco{float: right; color: $Laranja; font-size: 15px;}
+   	 		.p_sinal{float:left; color: #8c8c8c; font-size: 15px;}
+   	 	}
+   	 	p{font-family: $Open; padding: 5px; font-size: 11px; color:#050505;}
+   	}
+}
+.descricao{
+	@include model(797px, 137px);
+   	 background: $Branco;
+   	 margin-bottom: 10px;
+   	 p{font-family: $Open;font-size: 15px; padding-left: 10px; color:$PretoFosco;}
+}
+.empresa{
+	@include model(797px, 219px);
+   	 background: $Branco;
+   	 margin-bottom: 10px;
+   	 .logoempresa{
+   	 	@include model(218px, 143px);
+   	 	border-right: solid 1px $CinzaClaro;
+   	 	float: left;
+   	 }
+   	 .infoempresa{
+   	 	@include model(572px, 155px);
+   	 	float: right;
+   	 	h1{
+   	 		font-family: $Geo;
+			color: $Laranja;
+			font-size: 40px;
+			margin: 0px 30px;
+			padding-top: 0px;
+   	 	}
+   	 	 p{font-family: $Open;font-size: 15px; padding-left: 10px; color:$PretoFosco;padding-top: 10px;}
+   	 }
+}
+.avaliacoes{
+	@include model(797px, 575px);
+   	 background: $Branco;
+   	 margin-bottom: 10px;
+   	 .comentarios{
+   	 	@include model(777px, 130px);
+   	 	margin:0px auto;
+   	 	border-bottom: dotted 1px $CinzaClaro;
+   	 	h2{color:$Laranja;padding: 0px;font-style: italic; float: left;}
+   	 	.data{float: right; color:$Azul; font-family: $Geo; font-style: normal;}
+   	 	p{float: left;font-family: $Open; font-style: italic; font-size: 14px;margin-bottom: 5px;}
+   	 	.star{float: left;}
+   	 }
+}
+.relacionados{
+	@include model(1100px, 291px);
+	li{
+		@include model(211px, 244px);
+		display:inline-block;
+		background: $Branco;
+		margin-left: 10px;
+		img{@include model(193px, 130px);padding: 10px;}
+		&:first-child{margin-left:0px;}
+	}
+	a{
+		font-family: $Geo;
+		text-align: center;
+		color:$Laranja;
+		display: block;
+	}
+	p{
+		text-align: center;
+		font-family: $Open;
+		font-size: 15px;
+		color:#505050;
+	}
+	.desc{
+		font-style:italic;
+		font-size:13px;
+		color:#0e0e0e;
 	}
 }

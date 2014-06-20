@@ -16,6 +16,17 @@ $(document).ready(function() {
         $(".submenu-content").addClass('hide');
     });
 
+    /*Calendar*/
+    $(".datepicker").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNames: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        dayNamesShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        nextText: 'Próximo',
+        prevText: 'Anterior'
+    });
     /*PARALLAX*/
     $.stellar();
 
@@ -713,3 +724,7 @@ $(document).ready(function() {
     };
 
 })(jQuery);
+
+function exibeImagem(imagem) {
+    document.getElementById("mostra").innerHTML = '<a href="' + imagem + '" data-lightbox ="galeria"><img src="' + imagem + '" width="476px" height="282px" border="0"></a>';
+}
