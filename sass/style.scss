@@ -12,11 +12,13 @@
 ol, ul, li, form ol {
     list-style: none;
 }
+
 input:focus {
-  outline: none;
+    outline: none;
 }
-textarea:focus{
- outline:none;
+
+textarea:focus {
+    outline: none;
 }
 
 /*========================FONT-FACE==============================*/
@@ -60,16 +62,19 @@ textarea:focus{
     font-style: normal;
 }
 
+
 @font-face {
-  font-family: "raty";
-  font-style: normal;
-  font-weight: normal;
-  src: url("fonts/raty.eot");
-  src: url("fonts/raty.eot?#iefix") format("embedded-opentype");
-  src: url("fonts/raty.svg#raty") format("svg");
-  src: url("fonts/raty.ttf") format("truetype");
-  src: url("fonts/raty.woff") format("woff");
+    font-family: "raty";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/raty.eot");
+    src: url("fonts/raty.eot?#iefix") format("embedded-opentype");
+    src: url("fonts/raty.svg#raty") format("svg");
+    src: url("fonts/raty.ttf") format("truetype");
+    src: url("fonts/raty.woff") format("woff");
 }
+
+
 /*========================FUNCOES==============================*/
 @mixin model($width, $height) {
     width: $width;
@@ -80,7 +85,6 @@ textarea:focus{
 /*FONTES*/
 $Open: "Open Sans";
 $Geo: "geometr415_blk_btblack";
-
 
 /*CORES*/
 $Branco: white;
@@ -122,44 +126,50 @@ hr {
     margin: 0px auto;
     margin-top: 20px;
 }
+
 /*==================================================RATING=====================================================*/
 .cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
-  font-size: 2em;
+    font-size: 2em;
 }
+
 .cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-family: "raty";
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  line-height: 1;
-  speak: none;
-  text-transform: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: "raty";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    speak: none;
+    text-transform: none;
 }
 
 .cancel-on-png:before {
-  content: "\e600";
+    content: "\e600";
 }
 
 .cancel-off-png:before {
-  content: "\e601";
+    content: "\e601";
 }
 
 .star-on-png:before {
-  content: "\f005";
+    content: "\f005";
 }
 
 .star-off-png:before {
-  content: "\f006";
+    content: "\f006";
 }
 
 .star-half-png:before {
-  content: "\f123";
+    content: "\f123";
 }
-#star{
-	float:left;
+
+.star {
+    float: left;
+    position:relative;
+    top: 5px;
 }
+
 /*==================================================HEADER=====================================================*/
 header {
     @include model(100%, 60px);
@@ -215,6 +225,8 @@ header {
         line-height: 20px;
         padding: 0 20px;
         background: url(../images/border-nav.png) left center no-repeat;
+        position: relative;
+    top: -2px;
     }
     a {
         color: $Branco;
@@ -260,7 +272,7 @@ header {
     }
     li {
         display: block;
-        height: 16px;
+        height: 17px;
         line-height: 16px;
         font-family: $Open;
         font-size: 15px;
@@ -503,14 +515,15 @@ footer {
 
 /*=========================================================================================================================*/
 /*=====================================================BUSCA - LOCALIZACAO ===============================================*/
-.titRes{
-	font-family: $Geo;
+.titRes {
+    font-family: $Geo;
     color: $Laranja;
     font-size: 40px;
     text-transform: uppercase;
-    margin:15px 0;
-    padding-top:25px;
+    margin: 15px 0;
+    padding-top: 25px;
 }
+
 .wrap-busca {
     width: 1100px;
     margin: 30px auto;
@@ -589,263 +602,514 @@ footer {
             color: $Preto;
             font-family: $Open;
             -webkit-font-smoothing: subpixel-antialiased;
-            &:hover{
-            	color: $AzulClaro;
+            &:hover {
+                color: $AzulClaro;
             }
         }
     }
 }
+
 .resultados {
-	width:750px;
-	float:right;
+    width: 750px;
+    float: right;
     li {
-    	@include model(750px,150px);
-    	border-top:1px solid $Branco;
-    	border-bottom:1px solid $CinzaMedio;
+        @include model(750px, 150px);
+        border-top: 1px solid $Branco;
+        border-bottom: 1px solid $CinzaMedio;
         .resultados-box {
             width: 750px;
             height: 107px;
             margin-top: 20px;
-            figure{
-            	float: left;
-            	padding-right:15px;
-            	img{
-            		@include model(140px,105px);
-            	}
+            figure {
+                float: left;
+                padding-right: 15px;
+                img {
+                    @include model(140px, 105px);
+                }
             }
-            h1{
-            	font-family: $Geo;
-            	color: $Laranja;
-            	font-size: 24px;
+            h1 {
+                font-family: $Geo;
+                color: $Laranja;
+                font-size: 24px;
             }
-            p{
-            	font-size: 12px;
-            	font-family: $Open;
-            	color: $Preto;
+            p {
+                font-size: 12px;
+                font-family: $Open;
+                color: $Preto;
             }
-            h2{
-				font-size: 13px;
-				font-family: $Open;
-				color: $CinzaEscuro;
-				font-weight: normal;
+            h2 {
+                font-size: 13px;
+                font-family: $Open;
+                color: $CinzaEscuro;
+                font-weight: normal;
             }
-            h3{
-            	font-size: 20px;
-            	color: $Laranja;
-            	font-family: $Geo;
-            	float: right;
+            h3 {
+                font-size: 20px;
+                color: $Laranja;
+                font-family: $Geo;
+                float: right;
+                position: relative;
+                top: -10px;
             }
         }
     }
-    .ban2{
-    	li{
-    		border:none;
-    		width: 750px;
-    		height: 90px;
-    		padding: 10px;
-    	}
+    .ban2 {
+        li {
+            border: none;
+            width: 750px;
+            height: 90px;
+            padding: 10px;
+        }
     }
 }
-.controle-pag{
-	font-family: $Geo;
-	color: $Laranja;
-	font-size:10px;
-	float:left;
-	span{
-		font-size: 30px;
-		position:relative;
-		top: 5px;
-		padding:0 8px;
-		a{
-			color: $Laranja;
-		}
-	}
 
+.controle-pag {
+    font-family: $Geo;
+    color: $Laranja;
+    font-size: 10px;
+    float: left;
+    span {
+        font-size: 30px;
+        position: relative;
+        top: 5px;
+        padding: 0 8px;
+        a {
+            color: $Laranja;
+        }
+    }
 }
-.paginacao{
-	float:right;
-	padding-top:15px;
-	li{
-		height: 25px;
-		line-height: 25px;
-		font-size: 20px;
-		border:none;
-		display: inline;
-		font-family: $Geo;
-		padding-left:10px;
-		a{
-			color: $Laranja;
-			&:hover{
-				color: $CinzaMedio;
-			}
-		}
-	}
+
+.paginacao {
+    float: right;
+    padding-top: 15px;
+    li {
+        height: 25px;
+        line-height: 25px;
+        font-size: 20px;
+        border: none;
+        display: inline;
+        font-family: $Geo;
+        padding-left: 10px;
+        a {
+            color: $Laranja;
+            &:hover {
+                color: $CinzaMedio;
+            }
+        }
+    }
 }
+
 /*=========================================================================================================================*/
 /*=====================================================DETALHES ===============================================*/
 .wrap-detalhe {
     width: 1100px;
     margin: 30px auto;
-    h1{
-    	font-family: $Geo;
-	    color: $Laranja;
-	    font-size: 40px;
-	    margin:15px 0;
-	    padding-top:25px;
+    h1 {
+        font-family: $Geo;
+        color: $Laranja;
+        font-size: 40px;
+        margin: 15px 0;
+        padding-top: 25px;
     }
-    h2{
-    	font-family: $Geo;
-	    color: $Azul;
-	    font-size: 30px;
-	  	padding: 10px 0px 0px 10px;
+    h2 {
+        font-family: $Geo;
+        color: $Azul;
+        font-size: 30px;
+        padding: 10px 0px 0px 10px;
     }
 }
-.infos{
-	 width: 296px;
-   	 float: right;
-   	 .local{
-   	 	@include model(296px, 365px);
-   	 	background: $Branco;
-   	 	margin-bottom: 10px;
-   	 }
-   	 .links{
-   	 	@include model(296px, 137px);
-   	 	background: $Branco;
-   	 	margin-bottom: 10px;
-   	 	i{color:$Laranja;}
-   	 	p{color:$Laranja;font-family: $Geo; font-size: 18px;}
-   	 	ul{margin-top: 10px;}
-   	 	li{display: inline-block;margin-left: 30px;}
-   	 }
-   	 .proposta{
-   	 	@include model(296px, 457px);
-   	 	background: $Branco;
-   	 	i{color:#dedede;}
-   	 	form{@include model(275px, 396px);margin-left: 10px;}
-   	 	span{font-size: 20px; color:#dedede;margin-left: 5px;}
-   	 	input{
-   	 		border: 1px solid #dedede;
-   	 		@include model(260px, 30px);
-   	 		text-indent:15px;
-   	 		-moz-border-radius: 100px;
-	        -webkit-border-radius: 100px;
-	        -webkit-appearance: none;
-	        border-radius: 100px;
-	        margin-bottom: 10px;
-   	 	}
-   	 	.ddd{width:60px;}
-   	 	.fone{width:180px;}	
-   	 	.dinicio, .dfinal{width:92px;margin-right: 4px;}
-   	 	textarea {
-   	 		resize:none;
-   	 		@include model(263px, 185px);
-   	 		text-indent:15px;
-   	 		border: 1px solid #dedede;
-			-moz-border-radius: 20px;
-	        -webkit-border-radius: 20px;
-	        -webkit-appearance: none;
-	        border-radius: 20px;
-		}
-		input[type="submit"]{@include model(104px, 31px); background: $Laranja; color: $Branco;float: right; font-family: $Geo;text-indent: 0px; font-size: 20px; cursor: pointer;}
-   	 }
+
+.infos {
+    width: 296px;
+    float: right;
+    .local {
+        @include model(296px, 365px);
+        background: $Branco;
+        margin-bottom: 10px;
+    }
+    .links {
+        @include model(296px, 137px);
+        background: $Branco;
+        margin-bottom: 10px;
+        i {
+            color: $Laranja;
+        }
+        p {
+            color: $Laranja;
+            font-family: $Geo;
+            font-size: 18px;
+        }
+        ul {
+            margin-top: 10px;
+        }
+        li {
+            display: inline-block;
+            margin-left: 30px;
+        }
+    }
+    .proposta {
+        @include model(296px, 457px);
+        background: $Branco;
+        i {
+            color: #dedede;
+        }
+        form {
+            @include model(275px, 396px);
+            margin-left: 10px;
+        }
+        span {
+            font-size: 20px;
+            color: #dedede;
+            margin-left: 5px;
+        }
+        input {
+            border: 1px solid #dedede;
+            @include model(260px, 30px);
+            text-indent: 15px;
+            -moz-border-radius: 100px;
+            -webkit-border-radius: 100px;
+            -webkit-appearance: none;
+            border-radius: 100px;
+            margin-bottom: 10px;
+        }
+        .ddd {
+            width: 60px;
+        }
+        .fone {
+            width: 180px;
+        }
+        .dinicio, .dfinal {
+            width: 92px;
+            margin-right: 4px;
+        }
+        textarea {
+            resize: none;
+            @include model(263px, 185px);
+            text-indent: 15px;
+            border: 1px solid #dedede;
+            -moz-border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -webkit-appearance: none;
+            border-radius: 20px;
+        }
+        input[type="submit"] {
+            @include model(104px, 31px);
+            background: $Laranja;
+            color: $Branco;
+            float: right;
+            font-family: $Geo;
+            text-indent: 0px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
 }
-.p_detalhes{
-	@include model(797px, 365px);
-	margin-bottom: 10px;
-   	.imagens{
-   		@include model(495px, 365px);
-   	 	background: $Branco;
-   	 	margin-right: 9px;
-   	 	float: left;
-   	 	img{padding:10px; width: 476px; height: 282px;}
-   	 	li{
-   	 		display:inline-block;
-   	 		img{width:73px; height: 55px;padding: 0px 0px 0px 8px;}
-   	 	}
-   	}
-   	.precos{
-   		@include model(293px, 365px);
-   	 	background: $Branco;
-   	 	float: right;
-   	 	ul{@include model(271px, 157px);padding: 5px;margin-top: 40px;}
-   	 	li{
-   	 		border-bottom: solid 1px #b3b3b3;
-   	 		padding: 5px;
-   	 		&:last-child{border-bottom:0px;}
-   	 		.p_nome{float:left; font-size: 15px;}
-   	 		.p_preco{float: right; color: $Laranja; font-size: 15px;}
-   	 		.p_sinal{float:left; color: #8c8c8c; font-size: 15px;}
-   	 	}
-   	 	p{font-family: $Open; padding: 5px; font-size: 11px; color:#050505;}
-   	}
+
+.p_detalhes {
+    @include model(797px, 365px);
+    margin-bottom: 10px;
+    .imagens {
+        @include model(495px, 365px);
+        background: $Branco;
+        margin-right: 9px;
+        float: left;
+        img {
+            padding: 10px;
+            width: 476px;
+            height: 282px;
+        }
+        li {
+            display: inline-block;
+            img {
+                width: 73px;
+                height: 55px;
+                padding: 0px 0px 0px 8px;
+            }
+        }
+    }
+    .precos {
+        @include model(293px, 365px);
+        background: $Branco;
+        float: right;
+        ul {
+            @include model(271px, 157px);
+            padding: 5px;
+            margin-top: 40px;
+        }
+        li {
+            border-bottom: solid 1px #b3b3b3;
+            padding: 5px;
+            &:last-child {
+                border-bottom: 0px;
+            }
+            .p_nome {
+                float: left;
+                font-size: 15px;
+            }
+            .p_preco {
+                float: right;
+                color: $Laranja;
+                font-size: 15px;
+            }
+            .p_sinal {
+                float: left;
+                color: #8c8c8c;
+                font-size: 15px;
+            }
+        }
+        p {
+            font-family: $Open;
+            padding: 5px;
+            font-size: 11px;
+            color: #050505;
+        }
+    }
 }
-.descricao{
-	@include model(797px, 137px);
-   	 background: $Branco;
-   	 margin-bottom: 10px;
-   	 p{font-family: $Open;font-size: 15px; padding-left: 10px; color:$PretoFosco;}
+
+.descricao {
+    @include model(797px, 137px);
+    overflow-x: auto;
+    background: $Branco;
+    margin-bottom: 10px;
+    p {
+        font-family: $Open;
+        font-size: 15px;
+        padding-left: 10px;
+        color: $PretoFosco;
+        overflow-x: auto;
+    }
 }
-.empresa{
-	@include model(797px, 219px);
-   	 background: $Branco;
-   	 margin-bottom: 10px;
-   	 .logoempresa{
-   	 	@include model(218px, 143px);
-   	 	border-right: solid 1px $CinzaClaro;
-   	 	float: left;
-   	 }
-   	 .infoempresa{
-   	 	@include model(572px, 155px);
-   	 	float: right;
-   	 	h1{
-   	 		font-family: $Geo;
-			color: $Laranja;
-			font-size: 40px;
-			margin: 0px 30px;
-			padding-top: 0px;
-   	 	}
-   	 	 p{font-family: $Open;font-size: 15px; padding-left: 10px; color:$PretoFosco;padding-top: 10px;}
-   	 }
+
+.empresa {
+    @include model(797px, 219px);
+    background: $Branco;
+    margin-bottom: 10px;
+    .logoempresa {
+        @include model(218px, 143px);
+        border-right: solid 1px $CinzaClaro;
+        float: left;
+    }
+    .infoempresa {
+        @include model(572px, 155px);
+        float: right;
+        h1 {
+            font-family: $Geo;
+            color: $Laranja;
+            font-size: 40px;
+            margin: 0px 30px;
+            padding-top: 0px;
+        }
+        p {
+            font-family: $Open;
+            font-size: 15px;
+            padding-left: 10px;
+            color: $PretoFosco;
+            padding-top: 10px;
+        }
+    }
 }
-.avaliacoes{
-	@include model(797px, 575px);
-   	 background: $Branco;
-   	 margin-bottom: 10px;
-   	 .comentarios{
-   	 	@include model(777px, 130px);
-   	 	margin:0px auto;
-   	 	border-bottom: dotted 1px $CinzaClaro;
-   	 	h2{color:$Laranja;padding: 0px;font-style: italic; float: left;}
-   	 	.data{float: right; color:$Azul; font-family: $Geo; font-style: normal;}
-   	 	p{float: left;font-family: $Open; font-style: italic; font-size: 14px;margin-bottom: 5px;}
-   	 	.star{float: left;}
-   	 }
+
+.avaliacoes {
+    @include model(797px, 575px);
+    background: $Branco;
+    margin-bottom: 10px;
+    .comentarios {
+        @include model(777px, 130px);
+        margin: 0px auto;
+        border-bottom: dotted 1px $CinzaClaro;
+        h2 {
+            color: $Laranja;
+            padding: 0px;
+            font-style: italic;
+            float: left;
+        }
+        .data {
+            float: right;
+            color: $Azul;
+            font-family: $Geo;
+            font-style: normal;
+        }
+        p {
+            float: left;
+            font-family: $Open;
+            font-style: italic;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .star {
+            float: left;
+        }
+    }
 }
-.relacionados{
-	@include model(1100px, 291px);
-	li{
-		@include model(211px, 244px);
-		display:inline-block;
-		background: $Branco;
-		margin-left: 10px;
-		img{@include model(193px, 130px);padding: 10px;}
-		&:first-child{margin-left:0px;}
-	}
-	a{
-		font-family: $Geo;
-		text-align: center;
-		color:$Laranja;
-		display: block;
-	}
-	p{
-		text-align: center;
-		font-family: $Open;
-		font-size: 15px;
-		color:#505050;
-	}
-	.desc{
-		font-style:italic;
-		font-size:13px;
-		color:#0e0e0e;
-	}
+
+.relacionados {
+    @include model(1100px, 291px);
+    li {
+        @include model(211px, 244px);
+        display: inline-block;
+        background: $Branco;
+        margin-left: 10px;
+        img {
+            @include model(193px, 130px);
+            padding: 10px;
+        }
+        &:first-child {
+            margin-left: 0px;
+        }
+    }
+    a {
+        font-family: $Geo;
+        text-align: center;
+        color: $Laranja;
+        display: block;
+    }
+    p {
+        text-align: center;
+        font-family: $Open;
+        font-size: 15px;
+        color: #505050;
+    }
+    .desc {
+        font-style: italic;
+        font-size: 13px;
+        color: #0e0e0e;
+    }
+}
+
+/*=========================================================================================================================*/
+/*===================================================== ESTOQUE ===============================================*/
+.estEmpresa {
+    @include model(1100px, 265px);
+    display: block;
+    .logoempresa {
+        @include model(220px, 143px);
+        display: block;
+        line-height: 220px;
+        border-right: solid 1px $CinzaClaro;
+        float: left;
+        text-align:center;
+        margin-top: 20px;
+    }
+    .infoempresa {
+        @include model(600px, 155px);
+        float: left;
+        h1 {
+            font-family: $Geo;
+            color: $Laranja;
+            font-size: 40px;
+            margin: 20px 30px 10px 10px;
+            padding-top: 0px;
+            text-transform: uppercase;
+            font-weight: 100;
+        }
+        p {
+            font-family: $Open;
+            font-size: 15px;
+            padding-left: 10px;
+            color: $PretoFosco;
+        }
+    }
+    h2 {
+        font-size: 30px;
+        text-transform: uppercase;
+        font-family: $Geo;
+        color: $Azul;
+        padding-top: 25px;
+        font-weight: 100;
+    }
+    .estMap{
+        position:relative;
+        top: -20px;
+        float: right;
+    }
+}
+/*======================================================================================================*/
+/*====================================ANUNCIE========================================*/
+.pagContato{
+    padding-top:50px;
+    width: 700px;
+    margin:20px auto;
+     h1{
+            font-family: $Geo;
+            color: $Laranja;
+            font-size: 40px;
+            margin: 20px 30px 10px 0px;
+            padding-top: 0px;
+            text-transform: uppercase;
+            font-weight: 100;
+        }
+        p{
+            font-family: $Open;
+            font-size: 14px;
+            color: $CinzaEscuro;
+            padding-bottom: 20px;
+            font-style: italic;
+        }
+    form{
+        width: 330px;
+        height: 360px;
+        label{
+            width: 100%;
+            clear: both;
+            padding-left:10px;
+            position:relative;
+            top: -5px;
+            font-family: $Geo;
+            font-size: 20px;
+            color: $Azul;
+        }
+        input {
+            border: 1px solid #dedede;
+            @include model(340px, 30px);
+            text-indent: 15px;
+            -moz-border-radius: 100px;
+            -webkit-border-radius: 100px;
+            -webkit-appearance: none;
+            border-radius: 100px;
+            margin-bottom: 20px;
+            font-size: 12px;
+        }
+        .mensEsq{
+            position:relative;
+            top: -304px;
+            left: 365px;
+            textarea{
+                @include model(340px, 212px);
+                font-size: 12px;
+                text-indent: 15px;
+            -moz-border-radius: 100px;
+            -webkit-border-radius: 100px;
+            -webkit-appearance: none;
+            border-radius: 10px;
+            border: 1px solid #dedede;
+            padding-top:10px;
+            }
+            input[type=submit]{
+                background-color:$Laranja;
+                color: $Branco;
+                font-family: $Open;
+                font-size: 14px;
+                font-weight: 900;
+                text-indent: 0;
+                cursor: pointer;
+                &:hover{
+                    position:relative;
+                    top:1px;
+                }
+            }
+        }
+    }
+}
+/*=========================================================================================================================*/
+/*===================================================== QUEM SOMOS ===============================================*/
+.quem_somos{
+    width: 1100px;
+    margin: 30px auto;
+    padding-bottom: 30px;
+    p{
+        font-family: $Open;
+        margin-bottom: 10px;
+        color: CinzaEscuro;
+        font-size: 14px;
+    }
 }
